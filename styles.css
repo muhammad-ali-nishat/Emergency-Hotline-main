@@ -1,0 +1,116 @@
+:root {
+    --bg: #f5fffa; /* MintCream */
+    --bg-2: #f5fffa;
+    --card: #ffffff;
+    --text: #0f172a;
+    --muted: #475569;
+    --brand: #22c55e; /* green */
+    --brand-2: #16a34a; /* darker green */
+    --success: #16a34a;
+    --danger: #ef4444;
+    --warning: #f59e0b;
+    --white: #ffffff;
+    --shadow: rgba(0, 0, 0, 0.1);
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+    margin: 0;
+    font-family: 'Hind Madurai', system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", sans-serif;
+    color: var(--text);
+    background: var(--bg);
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 3.6rem;
+    background: #ffffff;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+.nav-left { display: flex; align-items: center; gap: 10px; }
+.logo { width: 28px; height: 28px; }
+.site-name { font-weight: 700; letter-spacing: 0.2px; }
+.nav-right { display: flex; align-items: center; gap: 12px; }
+.nav-pill { display: inline-flex; align-items: center; gap: 8px; padding: 6px 10px; background: rgba(34,197,94,0.12); border: 1px solid rgba(34,197,94,0.25); color: var(--text); border-radius: 999px; }
+.pill-value { font-weight: 700; }
+.pill-icon { font-size: 16px; }
+.pill-img { width: 16px; height: 16px; object-fit: contain; }
+.copy-pill-btn { background: var(--brand); color: #fff; border: none; padding: 8px 14px; border-radius: 999px; font-weight: 700; cursor: pointer; }
+
+.hero {
+    background: linear-gradient(180deg, #013223 0%, #006747 50%, #013223 100%);
+    padding: 40px 3.6rem 28px;
+    text-align: center;
+}
+.hero-inner { max-width: 960px; margin: 0 auto; }
+.hero-logo { width: 92px; height: 92px; object-fit: contain; margin-bottom: 8px; }
+.hero-title { margin: 8px 0; font-size: 40px; font-weight: 800; color: #ffffff; }
+.hero-subtitle { margin: 0; color: #ffffff; font-size: 20px; font-weight: 600; white-space: nowrap; }
+
+.container { max-width: none; margin: 20px 0; padding: 0 3.6rem; display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; align-items: stretch; }
+.cards-section { grid-column: span 3; }
+.cards-section { margin-bottom: 90px; }
+.history-section { grid-column: span 1; }
+
+.cards-section .section-header { display: none; }
+.section-title { font-size: 20px; margin: 0; }
+
+.cards-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; align-items: stretch; }
+.card {
+    background: var(--card);
+    border: 1px solid rgba(0,0,0,0.06);
+    border-radius: 16px;
+    box-shadow: 0 10px 24px var(--shadow);
+    display: flex; flex-direction: column; overflow: hidden; height: 100%;
+}
+.card-top { display: flex; justify-content: space-between; align-items: center; padding: 12px 12px 0; }
+.heart-btn { background: #f8fafc; border: 1px solid rgba(0,0,0,0.12); color: var(--text); border-radius: 10px; padding: 6px 8px; cursor: pointer; }
+.card-media { width: 60px; height: 60px; background: #f1f5f9; border-radius: 12px; overflow: hidden; display: grid; place-items: center; }
+.card-media img { width: 36px; height: 36px; object-fit: contain; }
+.card-body { padding: 12px; display: grid; gap: 8px; }
+.names .name { margin: 0; font-size: 16px; font-weight: 700; color: #0f172a; }
+.names .sub { margin: 2px 0 0; color: #64748b; font-size: 12px; }
+.hotline-row { display: flex; gap: 6px; align-items: baseline; }
+.hotline-label { color: var(--muted); font-size: 13px; }
+.hotline-number { font-weight: 700; letter-spacing: 0.4px; }
+.meta-row { display: flex; gap: 8px; }
+.badge { background: #F2F2F2; color: #334155; padding: 4px 8px; border-radius: 999px; font-size: 12px; border: 1px solid #e5e7eb; }
+.card-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding: 12px; border-top: 1px solid rgba(255,255,255,0.06); }
+.btn-primary { background: var(--brand); color: var(--white); border: 0; padding: 10px 12px; border-radius: 10px; cursor: pointer; font-weight: 700; }
+.btn-secondary { background: #f8fafc; color: var(--text); border: 1px solid rgba(0,0,0,0.12); padding: 10px 12px; border-radius: 10px; cursor: pointer; font-weight: 600; }
+.copy-btn { color: #5C5C5C; }
+.btn-outline { background: transparent; color: var(--text); border: 1px solid rgba(0,0,0,0.18); padding: 8px 12px; border-radius: 10px; cursor: pointer; }
+/* Clear History button customized to match Call button styling */
+#clearHistoryBtn { background: var(--brand); color: #ffffff; border: none; padding: 12px 36px; border-radius: 50px; font-weight: 700; }
+
+.history-section { background: #ffffff; color: #0f172a; border-radius: 16px; padding: 16px; border: 1px solid rgba(0,0,0,0.06); height: 100%; display: flex; flex-direction: column; }
+.history-section, .history-section * { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", sans-serif; }
+.history-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
+.history-title-wrap { display: flex; align-items: center; gap: 8px; }
+.history-icon { filter: grayscale(0.2); }
+.history-title { margin: 0; font-size: 18px; font-weight: 800; }
+.history-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; flex: 1; overflow: auto; align-content: flex-start; }
+.history-item { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 12px; padding: 10px 12px; border: 1px solid rgba(0,0,0,0.06); border-radius: 12px; background: #fff; height: 83px; }
+.history-main { display: flex; flex-direction: column; gap: 4px; align-items: flex-start; }
+.history-name { font-weight: 700; }
+.history-number { color: #334155; }
+.history-time { color: #64748b; font-size: 12px; }
+
+@media (max-width: 1024px) {
+    .cards-grid { grid-template-columns: repeat(2, 1fr); }
+    .container { grid-template-columns: 1fr; }
+    .cards-section, .history-section { grid-column: span 1; }
+}
+
+@media (max-width: 640px) {
+    .cards-grid { grid-template-columns: 1fr; }
+    .hero-title { font-size: 26px; }
+}
+
+

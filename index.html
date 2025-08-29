@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Hotline</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-left">
+            <img src="assets/logo.png" alt="Logo" class="logo"/>
+            <span class="site-name">Emergency Service</span>
+        </div>
+        <div class="nav-right">
+            <div class="nav-pill"><span class="pill-value" id="heartCount">0</span><img src="assets/heart.png" alt="heart" class="pill-img"/></div>
+            <div class="nav-pill"><span class="pill-value" id="coinCount">100</span><img src="assets/coin.png" alt="coin" class="pill-img"/></div>
+            <button id="copyCountBtn" class="copy-pill-btn"><span id="copyCount">0</span> Copy</button>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-inner">
+            <img src="assets/logo.png" alt="Emergency Service logo" class="hero-logo"/>
+            <h1 class="hero-title">Emergency Service Directory</h1>
+            <p class="hero-subtitle">Government Emergency Services at Your Fingertip – A Project by  Government of the People’s Republic of Bangladesh</p>
+        </div>
+    </section>
+
+    <main class="container">
+        <section class="cards-section">
+            <div id="cardsGrid" class="cards-grid">
+                <!-- Cards injected by JS -->
+            </div>
+        </section>
+
+        <aside class="history-section">
+            <div class="history-header">
+                <div class="history-title-wrap">
+                    <span class="history-icon">🕘</span>
+                    <h2 class="history-title">Call History</h2>
+                </div>
+                <button id="clearHistoryBtn" class="btn-outline">Clean</button>
+            </div>
+            <ul id="historyList" class="history-list">
+                <!-- History items appear here -->
+            </ul>
+        </aside>
+    </main>
+
+    <template id="cardTemplate">
+        <article class="card">
+            <div class="card-top">
+                <div class="card-media" aria-hidden="true"></div>
+                <button class="heart-btn" title="Like">💗</button>
+            </div>
+            <div class="card-body">
+                <div class="names">
+                    <h3 class="name"></h3>
+                    <p class="sub"></p>
+                </div>
+                <div class="hotline-row">
+                    <span class="hotline-label">Hotline:</span>
+                    <span class="hotline-number"></span>
+                </div>
+                <div class="meta-row">
+                    <span class="badge"></span>
+                </div>
+            </div>
+            <div class="card-actions">
+                <button class="btn-secondary copy-btn">📋 Copy</button>
+                <button class="btn-primary call-btn">📞 Call</button>
+            </div>
+        </article>
+    </template>
+
+    <template id="historyItemTemplate">
+        <li class="history-item">
+            <div class="history-main">
+                <span class="history-name"></span>
+                <span class="history-number"></span>
+            </div>
+            <div class="history-time"></div>
+        </li>
+    </template>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
+
+
