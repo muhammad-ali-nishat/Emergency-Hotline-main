@@ -1,4 +1,4 @@
-/* Data and state */
+
 const initialCoins = 100;
 const cardData = [
     { id: 'nat-emergency', name: 'National Emergency Number', sub: 'National Emergency', number: '999', category: 'All', icon: 'assets/emergency.png' },
@@ -19,11 +19,9 @@ const state = {
     history: [],
 };
 
-/* Helpers */
 function $(sel, root = document) { return root.querySelector(sel); }
 function $all(sel, root = document) { return Array.from(root.querySelectorAll(sel)); }
 function formatTime(date) {
-    // local time like 02:35 PM, 2025-08-29
     const d = date ?? new Date();
     const time = d.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
     const yyyy = d.getFullYear();
@@ -36,7 +34,6 @@ function alertMsg(message) {
     window.alert(message);
 }
 
-/* Render functions */
 function renderCounters() {
     $('#heartCount').textContent = state.hearts;
     $('#coinCount').textContent = state.coins;
@@ -117,7 +114,6 @@ function renderHistory() {
     });
 }
 
-/* Events */
 function bindGlobalEvents() {
     $('#clearHistoryBtn').addEventListener('click', () => {
         state.history = [];

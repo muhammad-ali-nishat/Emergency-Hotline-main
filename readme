@@ -1,0 +1,12 @@
+1 getElementById Select a single element by somethings unique id.
+ getElementByClassName Selects every single elements which are included in that class.
+ querySelector select elements using the css selector and its return the first element on the other hand querySelectorAll return all the matching element
+
+
+ 2. For create and insert a new element into the DOM first we have to use document.createElement(tagName) to create a new element. Then we need to add text,html and other attribute then we need to select a parent element and then attach the new element by append().
+
+ 3.event bubbling us a type of event in the dom where an event triggered on a child element and is handled by its ancestor elements
+
+ 4. in event delegationwe can attach a single event listener to a parent element.it is usefull because here we dont have to add hundreds of listeners to a child elements we can only add one listener to the parent. For this we can save memory and improves preformance.
+
+ 5. preventDefault() stops the browser’s default action for an event and stopPropagation() stops the event from bubbling up or capturing down the DOM.
